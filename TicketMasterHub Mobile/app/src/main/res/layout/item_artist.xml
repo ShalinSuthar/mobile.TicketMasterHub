@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_round"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/artist_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/artist_image"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/artist_image"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="#F3F8F3"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/artist_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artist_name"
+            android:layout_alignStart="@id/artist_name"
+            android:textColor="#DFE6E0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/artist_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artist_followers"
+            android:layout_alignStart="@id/artist_followers"
+            android:layout_marginTop="8dp"
+            android:autoLink="web"
+            android:text="Check out on Spotify"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/popularity_label"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/artist_url"
+            android:layout_alignStart="@id/artist_name"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="-80dp"
+            android:singleLine="false"
+            android:text="Popularity"
+            android:textColor="#E0F3E1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <ProgressBar
+            android:id="@+id/popularity_spinner"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/popularity_label"
+            android:layout_alignStart="@id/popularity_label"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="16dp"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            tools:progress="80" />
+
+        <TextView
+            android:id="@+id/popularity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_alignTop="@+id/popularity_spinner"
+            android:layout_alignEnd="@+id/popularity_spinner"
+            android:layout_alignBottom="@+id/popularity_spinner"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="32dp"
+            android:text="80"
+            android:textColor="#EDE5E5"
+            android:textSize="14dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bottom_round"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/popularity_album_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular albums"
+            android:textColor="#E6E0E0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/album_1_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/popularity_album_label"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/placeholder_event_image" />
+
+        <ImageView
+            android:id="@+id/album_2_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/popularity_album_label"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/album_1_image"
+            android:src="@drawable/placeholder_event_image" />
+
+        <ImageView
+            android:id="@+id/album_3_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/popularity_album_label"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/album_2_image"
+            android:src="@drawable/placeholder_event_image" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+

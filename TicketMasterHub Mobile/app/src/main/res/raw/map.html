@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+        <style>
+        html, body, #map_canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+    </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD383pD67sfa7BvAOmBx2cnkiA2KKwum7o&callback=initMap"
+                async defer></script>
+        <script>
+        var map;
+        function initialize(lat, lng) {
+            var mapOptions = {
+                center: {lat: lat, lng: lng},
+                zoom: 16
+            };
+            map = new google.maps.Map(document.getElementById('map_canvas'),
+                    mapOptions);
+            var marker = new google.maps.Marker({
+                position: {lat: lat, lng: lng},
+                map: map,
+                title: 'Marker'
+            });
+        }
+    </script>
+    </head>
+    <body>
+        <div id="map_canvas"></div>
+    </body>
+</html>

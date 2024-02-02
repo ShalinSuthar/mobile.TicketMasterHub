@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EventFinder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello test fragment</string>
+    <string name="keyword">*Keyword</string>
+    <string name="distance">*Distance (Miles)</string>
+    <string name="category">*Category</string>
+    <string name="location">*Location</string>
+    <string name="category_prompt">Select category</string>
+    <string name="back_button_text">Back</string>
+    <string name="details_tab_title">Back</string>
+    <string name="artist_tab_title">Back</string>
+    <string name="venue_tab_title">Back</string>
+
+    <string-array name="category_names">
+        <item>Default</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Arts &amp; Theatre</item>
+        <item>Film</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="category_values">
+        <item>Default</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>ArtsTheatre</item>
+        <item>Film</item>
+        <item>Miscellaneous</item>
+    </string-array>
+</resources>

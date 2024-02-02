@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FavoritesFragment">
+
+        <RelativeLayout
+            android:id="@+id/recyclerFrameLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:background="#D6D3D3">
+                <!-- Show the favorite events, if any -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/favoritesRecyclerView"
+                    android:layout_width="400dp"
+                    android:layout_height="697dp"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/buttonbig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                   >
+
+
+                </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/no_favorites_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No favorites available"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/rounded_corner_background"
+                    android:textColor="@color/green"
+                    android:padding="10dp"/>
+
+        </LinearLayout>
+
+</FrameLayout>

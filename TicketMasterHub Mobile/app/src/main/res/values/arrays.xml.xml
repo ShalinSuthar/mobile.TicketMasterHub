@@ -1,0 +1,8 @@
+<resources>
+<string-array name="keyword_options">
+    <item>Keyword 1</item>
+    <item>Keyword 2</item>
+    <item>Keyword 3</item>
+    <!-- Add more keywords as needed -->
+</string-array>
+</resources>

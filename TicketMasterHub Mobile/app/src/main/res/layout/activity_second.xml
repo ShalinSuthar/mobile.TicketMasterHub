@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Title Bar -->
+
+    <!-- TabLayout and ViewPager -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_event"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#DADADA">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/back_button_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/green_baseline_keyboard_backspace_24" />
+
+        <!-- Event name -->
+        <TextView
+            android:id="@+id/second_event_name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Event Name"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Social media icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="16dp">
+
+            <ImageButton
+                android:id="@+id/facebook_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageButton
+                android:id="@+id/twitter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitter" />
+
+            <ToggleButton
+                android:id="@+id/heart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/heart_outline"
+                android:textOff=""
+                android:textOn="" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_event"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0B0B0A"
+            app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+            app:tabIndicatorColor="#4CAF50"
+            app:tabSelectedTextColor="#4CAF50"
+            app:tabInlineLabel="true"
+            app:tabTextColor="#FFFCFC" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_event"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
